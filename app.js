@@ -36,7 +36,7 @@ app.use(session({
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/service', serviceRouter);
-app.use('/admin', adminRouter);
+app.use('/admin', serviceRouter);
 
 app.listen(PORT, () => {
   console.log('Server started on port: ', PORT);
