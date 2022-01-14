@@ -5,11 +5,10 @@ const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 const session = require('express-session');
 const FileStore = require('session-file-store')(session);
+// const { viewCounter, helloMiddleware } = require('../middlewares/allMiddleWares');
 
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
 const serviceRouter = require('./routes/service');
-const adminRouter = require('./routes/admin');
 
 const app = express();
 const PORT = process.env.PORT ?? 3000;
@@ -34,9 +33,7 @@ app.use(session({
 }));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/service', serviceRouter);
-app.use('/admin', serviceRouter);
 
 app.listen(PORT, () => {
   console.log('Server started on port: ', PORT);

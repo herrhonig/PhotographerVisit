@@ -1,4 +1,4 @@
-
+<script defer src="/javascripts/client.js"></script>
 	<!--
 	    Start Preloader
 	    ==================================== -->
@@ -78,8 +78,7 @@ Welcome Slider
                 <li><a data-scroll href="#portfolio">Портфолио</a></li>
                 <li><a data-scroll href="#our-team">Команда</a></li>
                 <li><a data-scroll href="#pricing">Цены</a></li>
-                <li><a data-scroll href="#blog">Блог</a></li>
-                <li><a data-scroll href="#contact-us">Контакты</a></li>
+                <li><a data-scroll href="#contact-us">Заказ</a></li>
             </ul>
         </nav>
         <!-- /main nav -->
@@ -746,7 +745,7 @@ Start Our Team
 							
 							<!-- plan name & value -->
 							<div class="price-title">
-								<h3>Basic</h3>
+								<h3>{{services[0].title}}</h3>
 								<p><strong class="value">20</strong>000</p>
 							</div>
 							<!-- /plan name & value -->
@@ -1072,21 +1071,21 @@ Start Our Team
 				<form id="contact-form" method="POST" action="sendmail.php" role="form">
 				
 					<div class="form-group">
-						<input type="text" placeholder="Your Name" class="form-control" name="name" id="name">
+						<input type="text" placeholder="Ваше имя" class="form-control" name="name" id="name">
 					</div>
 					
 					<div class="form-group">
-						<input type="email" placeholder="Your Email" class="form-control" name="email" id="email">
+						<input type="email" placeholder="E-mail" class="form-control" name="email" id="email">
 					</div>
 					
 					<div class="form-group">
-            <input type="phone" placeholder="Your Phone" class="form-control" name="phone" id="phone">
+            <input type="phone" placeholder="Номер телефона" class="form-control" name="phone" id="phone">
 					</div>
           {{!-- Удалить потом --}}
-					<p >Финальная сумма:</p>
 					<div class="form-group">
-						<input type="text" placeholder="Финальная сумма" class="form-control" value="14000р" name="subject" id="subject">
-					</div>
+						{{!-- <label>Финальная сумма (рублей):<input type="text" class="form-control" value="" name="total" id="total"></label> --}}
+            <label>ИТОГО:   <span id="final-cost">20000</span> рублей.</label>
+          </div>
           {{!-- Удалить потом --}}
 					
 					<div id="mail-success" class="success">
@@ -1098,7 +1097,8 @@ Start Our Team
 					</div>
 					
 					<div id="cf-submit">
-						<input type="submit" id="contact-submit" class="btn btn-transparent" value="Submit">
+						<input type="submit" id="contact-submit" class="btn btn-transparent" value="Оформить заказ">
+            <label class="thank-you hide" id="thank-you">Спасибо за заказ! Проект договора направлен вам на email. Наш менеджер свяжется с вам в ближайшее время.</label>
 					</div>						
 					
 				</form>
@@ -1108,10 +1108,11 @@ Start Our Team
 		</div> <!-- end row -->
 	</div> <!-- end container -->
 	
-	<!-- Google Map -->
-	{{!-- <div class="google-map">
-		<div id="map-canvas"></div>
-	</div>	 --}}
-	<!-- /Google Map -->
-	
 </section> <!-- end section -->
+
+
+{{!-- <div class="myModal1 hide">
+  <div class="myModal1__content">
+    <h3>Все отправлено успешно!!!</h3>
+  </div>
+</div> --}}

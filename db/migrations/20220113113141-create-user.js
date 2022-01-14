@@ -15,15 +15,16 @@ module.exports = {
         type: Sequelize.STRING
       },
       phone: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       agreement: {
-        type: Sequelize.TEXT
+        type: Sequelize.TEXT,
+        defaultValue: 'doc'
       },
       signed: {
-      type: Sequelize.BOOLEAN,
-      allowNull: false,
-      defaultValue: false
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        defaultValue: false
       },
       createdAt: {
         allowNull: false,
