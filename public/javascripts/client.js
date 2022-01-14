@@ -1,16 +1,20 @@
 const $form = document.getElementById('contact-form');
 const $myModal = document.querySelector('.myModal1');
+const $buttons = document.querySelectorAll('.buy-button');
 
-console.log('Привет!123');
-console.log();
+$buttons.forEach((button) => {
+  button.addEventListener('click', (event) => {
+    const id = event.target.id
+    const price = document.querySelector(`.strong-price${id}`).innerText.replace(/\D/g, '')
+    const finalPrice = document.getElementById('final-cost')
+    finalPrice.innerText = price;
+  })
+})
 
 $form.addEventListener('submit', async (event) => {
-  console.log('Привет!');
   event.preventDefault();
-
   const formData = Object.fromEntries(new FormData(event.target));
   formData.total = document.getElementById('final-cost').innerText
-  console.log(formData.total);
 
   if (formData.name.length > 0 && formData.phone.length === 11 && formData.email.includes('@')){
     const response = await fetch('/user', {
@@ -21,7 +25,6 @@ $form.addEventListener('submit', async (event) => {
       body: JSON.stringify(formData),
     });
     // myModal.classList.remove('hide');
-    console.log(response.status);
     document.getElementById("name").value = "";
     document.getElementById("email").value = "";
     document.getElementById("phone").value = "";

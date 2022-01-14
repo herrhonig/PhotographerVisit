@@ -31,13 +31,15 @@ router.post('/user', async (req, res) => {
         res(text);
       });
     }); 
-    // console.log('READ =====>', read);
-    const write = await read.replaceAll('userAdmin', user.name);
-    // console.log('WRITE =====>', write);
-    // fs.writeFile(`/doc/users/${user.name}-Dogovor.txt`, write);
-    User.create({ agreement: write })
-    fs.writeFile(process.env.PWD + `/public/doc/users/${user.name}-Dogovor-${user.createdAt}.doc`, write);
-    // sendmail({
+    const findUser = await User.findOne({ where: { name: user.name }})
+    const write = await read.replaceAll('userName', user.name)
+                            .replaceAll('Description', Service.description)
+                            .replaceAll('cost', Service.price)
+                            .replaceAll('Number', findUser.id);
+    User.update({ agreement: write }, { where: { name: user.name} })
+    fs.writeFile(process.env.PWD + `/public/doc/users/${user.name}-Dogovor-${user.createdAt}.txt`, write);
+  
+    //   sendmail({
     //   from: `${admin.email}`,
     //   to: `${user.email}`,
     //   replyTo: `${user.email}`,
@@ -53,6 +55,7 @@ router.post('/user', async (req, res) => {
     //   console.log(err && err.stack)
     //   console.dir(reply)
     // })
+
   } catch (error) {
     console.log('Error!', error);
     res.sendStatus(500);

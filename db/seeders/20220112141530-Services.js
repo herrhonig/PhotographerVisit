@@ -1,20 +1,10 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('Services', [
-      // {title: 'Фотосессия в студии', price: 15000, createdAt: new Date(), updatedAt: new Date()},
-      // {title: 'Прямая трансляция', price: 10000, createdAt: new Date(), updatedAt: new Date()},
-      // {title: 'Многокамерная видеосъемка', price: 50000, createdAt: new Date(), updatedAt: new Date()},
-      // {title: 'Фотосессия стиле love story', price: 20000, createdAt: new Date(), updatedAt: new Date()},
-      // {title: 'Детская фотосъемка', price: 12000, createdAt: new Date(), updatedAt: new Date()},
-      // {title: 'Корпоративная фотосъемка', price: 30000, createdAt: new Date(), updatedAt: new Date()},
-      // {title: 'Видеосъемка', price: 15000, createdAt: new Date(), updatedAt: new Date()},
-      // {title: 'Профессиональный монтаж', price: 15000, createdAt: new Date(), updatedAt: new Date()},
-      // {title: 'Анимация', price: 15000, createdAt: new Date(), updatedAt: new Date()},
-      // {title: 'Озвучивание и музыка', price: 15000, createdAt: new Date(), updatedAt: new Date()},
-      {title: 'BASIC', price: 20000, createdAt: new Date(), updatedAt: new Date()},
-      {title: 'SILVER', price: 33000, createdAt: new Date(), updatedAt: new Date()},
-      {title: 'GOLD', price: 51000, createdAt: new Date(), updatedAt: new Date()},
-      {title: 'PLATINUM', price: 89000, createdAt: new Date(), updatedAt: new Date()},
+      {title: 'BASIC', description: 'Фотосессия в студии, Детская фотосъёмка', price: 20000, createdAt: new Date(), updatedAt: new Date()},
+      {title: 'SILVER', description: 'Фотосессия в студии, Детская фотосъёмка, Видеосъемка', price: 33000, createdAt: new Date(), updatedAt: new Date()},
+      {title: 'GOLD', description: 'Фотосессия в студии, Детская фотосъёмка, Видеосъемка, Профессиональный монтаж', price: 51000, createdAt: new Date(), updatedAt: new Date()},
+      {title: 'PLATINUM', description: 'Фотосессия в студии, Детская фотосъёмка, Видеосъемка, Профессиональный монтаж, Озвучивание и музыка',price: 89000, createdAt: new Date(), updatedAt: new Date()},
   ]);
   },
   down: async (queryInterface, Sequelize) => {

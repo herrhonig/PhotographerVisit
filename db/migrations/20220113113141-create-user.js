@@ -19,7 +19,6 @@ module.exports = {
       },
       agreement: {
         type: Sequelize.TEXT,
-        defaultValue: 'doc'
       },
       signed: {
         type: Sequelize.BOOLEAN,

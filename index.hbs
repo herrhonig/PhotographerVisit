@@ -740,35 +740,116 @@ Start Our Team
 				    <!-- /section title -->
 					
 					<!-- single pricing table -->
-          {{#each services}}
-            <div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp" data-wow-duration="200ms">
-              <div class="price-item">
-                
-                <!-- plan name & value -->
-                <div class="price-title">
-                  <h3>Пакет услуг<br><br>{{this.title}}</h3>
-                  <p><strong class="value strong-price{{this.id}}" >{{this.price}} руб.</strong></p>
-                </div>
-                <!-- /plan name & value -->
-                
-                <!-- plan description -->
-                <ul>
-                  <li class="nice-cont">{{this.description}}</li>
-                  {{!-- <li></li>
-                  <li>1 GB Storage</li>
-                  <li>10 GB Bandwidth</li>
-                  <li>24/7 Tech Support</li> --}}
-                </ul>
-                <!-- /plan description -->
-                
-                <!-- signup button -->
-                <a class="btn btn-transparent buy-button" href="#contact-us" id="{{this.id}}">Заказать</a>
-                <!-- /signup button -->
-                
-              </div>
-            </div>
-          {{/each}}
-
+					<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp" data-wow-duration="200ms">
+						<div class="price-item">
+							
+							<!-- plan name & value -->
+							<div class="price-title">
+								<h3>{{services[0].title}}</h3>
+								<p><strong class="value">20</strong>000</p>
+							</div>
+							<!-- /plan name & value -->
+							
+							<!-- plan description -->
+							<ul>
+								<li>Фотосессия в студии\nДетская фотосъёмка</li>
+								{{!-- <li></li>
+								<li>1 GB Storage</li>
+								<li>10 GB Bandwidth</li>
+								<li>24/7 Tech Support</li> --}}
+							</ul>
+							<!-- /plan description -->
+							
+							<!-- signup button -->
+							<a class="btn btn-transparent" href="#">Заказать</a>
+							<!-- /signup button -->
+							
+						</div>
+					</div>
+					<!-- end single pricing table -->
+					
+					<!-- single pricing table -->
+					<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="400ms">
+						<div class="price-item">
+						
+							<!-- plan name & value -->
+							<div class="price-title">
+								<h3>Silver</h3>
+								<p><strong class="value">33</strong/>000</p>
+							</div>
+							<!-- /plan name & value -->
+							
+							<!-- plan description -->
+							<ul>
+								<li>Фотосессия в студии\nДетская фотосъёмка\nВидеосъемка</li>
+								{{!-- <li>1 GB Storage</li>
+								<li>10 GB Bandwidth</li>
+								<li>24/7 Tech Support</li> --}}
+							</ul>
+							<!-- /plan description -->
+							
+							<!-- signup button -->
+							<a class="btn btn-transparent" href="#">Заказать</a>
+							<!-- /signup button -->
+							
+						</div>
+					</div>
+					<!-- end single pricing table -->
+					
+					<!-- single pricing table -->
+					<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="600ms">
+						<div class="price-item">
+							
+							<!-- plan name & value -->
+							<div class="price-title">
+								<h3>Gold</h3>
+								<p><strong class="value">51</strong/>000</p>
+							</div>
+							<!-- /plan name & value -->
+							
+							<!-- plan description -->
+							<ul>
+								<li>Фотосессия в студии\nДетская фотосъёмка\nВидеосъемка\nПрофессиональный монтаж</li>
+								{{!-- <li>10 GB Bandwidth</li>
+								<li>24/7 Tech Support</li> --}}
+							</ul>
+							<!-- /plan description -->
+							
+							<!-- signup button -->
+							<a class="btn btn-transparent" href="#">Заказать</a>
+							<!-- /signup button -->
+							
+						</div>
+					</div>
+					<!-- end single pricing table -->
+					
+					<!-- single pricing table -->
+					<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="750ms">
+						<div class="price-item">
+						
+							<!-- plan name & value -->
+							<div class="price-title">
+								<h3>Platinum</h3>
+								<p><strong class="value">89</strong/>000</p>
+							</div>
+							<!-- /plan name & value -->
+							
+							<!-- plan description -->
+							<ul>
+								<li>Фотосессия в студии\nДетская фотосъёмка\nВидеосъемка\nПрофессиональный монтаж\nОзвучивание и музыка</li>
+								{{!-- <li>24/7 Tech Support</li> --}}
+							</ul>
+							<!-- /plan description -->
+							
+							<!-- signup button -->
+							<a class="btn btn-transparent" href="#">Заказать</a>
+							<!-- /signup button -->
+							
+						</div>
+					</div>
+					<!-- end single pricing table -->
+				    
+					
 				</div>       <!-- End row -->
 			</div>   	<!-- End container -->
 		</section>   <!-- End section -->
@@ -969,7 +1050,7 @@ Start Our Team
 					
 					<div class="con-info clearfix">
 						<i class="tf-ion-ios-email-outline"></i>
-						<span>Email: photostudio@friend.com</span>
+						<span>Email: hello@friend.com</span>
 					</div>
 				</div>
 			</div>
@@ -993,7 +1074,7 @@ Start Our Team
           {{!-- Удалить потом --}}
 					<div class="form-group">
 						{{!-- <label>Финальная сумма (рублей):<input type="text" class="form-control" value="" name="total" id="total"></label> --}}
-            <label class="label-cost">ИТОГО:   <span id="final-cost">0</span> руб.</label>
+            <label>ИТОГО:   <span id="final-cost">20000</span> рублей.</label>
           </div>
           {{!-- Удалить потом --}}
 					

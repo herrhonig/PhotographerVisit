@@ -2113,3 +2113,12 @@ blockquote {
 .thank-you {
   color: red;
 }
+
+.nice-cont {
+  height: 100px !important; 
+}
+
+.label-cost {
+  font-size: 30px;
+  color: whitesmoke;
+}
