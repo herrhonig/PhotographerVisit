@@ -39,22 +39,22 @@ router.post('/user', async (req, res) => {
     User.update({ agreement: write }, { where: { name: user.name} })
     fs.writeFile(process.env.PWD + `/public/doc/users/${user.name}-Dogovor-${user.createdAt}.txt`, write);
   
-    //   sendmail({
-    //   from: `${admin.email}`,
-    //   to: `${user.email}`,
-    //   replyTo: `${user.email}`,
-    //   subject: 'Договор на фотосъемку',
-    //   html: 'Договор на фотосъемку',
-    //   attachments: [
-    //     {   // utf-8 string as an attachment
-    //       filename: `${user.name}-Dogovor.txt`,
-    //       content: `${write}`,
-    //     },
-    //   ]
-    // }, function (err, reply) {
-    //   console.log(err && err.stack)
-    //   console.dir(reply)
-    // })
+      sendmail({
+      from: `${admin.email}`,
+      to: `${user.email}`,
+      replyTo: `${user.email}`,
+      subject: 'Договор на фотосъемку',
+      html: 'Договор на фотосъемку',
+      attachments: [
+        {   // utf-8 string as an attachment
+          filename: `${user.name}-Dogovor.txt`,
+          content: `${write}`,
+        },
+      ]
+    }, function (err, reply) {
+      console.log(err && err.stack)
+      console.dir(reply)
+    })
 
   } catch (error) {
     console.log('Error!', error);
