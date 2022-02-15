@@ -9,6 +9,9 @@
 `npm install
 create file .env
 `
+```bash
+npm install
+```
 
 `create database`
 `npx sequelize-cli db:migrate`
