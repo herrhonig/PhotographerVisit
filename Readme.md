@@ -6,14 +6,9 @@
 
 # Installation
 
-`npm install
-create file .env
-`
-```bash
-npm install
-```
-
-`create database`
+`npm install`
+Создать файл `.env`
+Создать базу данных `create database`
 `npx sequelize-cli db:migrate`
 `npx sequelize-cli db:seed:all`
 `npm start`
