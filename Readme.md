@@ -6,8 +6,8 @@
 
 # Installation
 
-`npm install` <b>
-`create file .env`
+npm install
+create file .env
 `create database`
 `npx sequelize-cli db:migrate`
 `npx sequelize-cli db:seed:all`
