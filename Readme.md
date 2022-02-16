@@ -4,6 +4,8 @@
 
 Сайт-визитка для команды фотографов - видеографов.
 
+<img src="https://s10.gifyu.com/images/video3485808924.gif" />
+
 # Installation
 
 1.	`npm install`
